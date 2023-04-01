@@ -1,0 +1,43 @@
+[2023-04-01 15:06:28,280] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: tutorial_taskflow_api_etl_virtualenv.extract manual__2023-04-01T15:06:27.329720+00:00 [queued]>
+[2023-04-01 15:06:28,300] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: tutorial_taskflow_api_etl_virtualenv.extract manual__2023-04-01T15:06:27.329720+00:00 [queued]>
+[2023-04-01 15:06:28,301] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2023-04-01 15:06:28,302] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2023-04-01 15:06:28,304] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2023-04-01 15:06:28,336] {taskinstance.py:1377} INFO - Executing <Task(_PythonVirtualenvDecoratedOperator): extract> on 2023-04-01 15:06:27.329720+00:00
+[2023-04-01 15:06:28,347] {standard_task_runner.py:52} INFO - Started process 330 to run task
+[2023-04-01 15:06:28,353] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'tutorial_taskflow_api_etl_virtualenv', 'extract', 'manual__2023-04-01T15:06:27.329720+00:00', '--job-id', '25', '--raw', '--subdir', '/home/***/.local/lib/python3.7/site-packages/***/example_dags/tutorial_taskflow_api_etl_virtualenv.py', '--cfg-path', '/tmp/tmpjaeqcv_y', '--error-file', '/tmp/tmpdsjabzyv']
+[2023-04-01 15:06:28,355] {standard_task_runner.py:80} INFO - Job 25: Subtask extract
+[2023-04-01 15:06:28,464] {task_command.py:369} INFO - Running <TaskInstance: tutorial_taskflow_api_etl_virtualenv.extract manual__2023-04-01T15:06:27.329720+00:00 [running]> on host 94291ec70be5
+[2023-04-01 15:06:28,592] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=tutorial_taskflow_api_etl_virtualenv
+AIRFLOW_CTX_TASK_ID=extract
+AIRFLOW_CTX_EXECUTION_DATE=2023-04-01T15:06:27.329720+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-04-01T15:06:27.329720+00:00
+[2023-04-01 15:06:28,598] {process_utils.py:165} INFO - Executing cmd: /usr/local/bin/python -m virtualenv /tmp/venvj6i4x8uw
+[2023-04-01 15:06:28,614] {process_utils.py:169} INFO - Output:
+[2023-04-01 15:06:30,938] {process_utils.py:173} INFO - created virtual environment CPython3.7.13.final.0-64 in 1290ms
+[2023-04-01 15:06:30,941] {process_utils.py:173} INFO -   creator CPython3Posix(dest=/tmp/venvj6i4x8uw, clear=False, no_vcs_ignore=False, global=False)
+[2023-04-01 15:06:30,943] {process_utils.py:173} INFO -   seeder FromAppData(download=False, pip=bundle, setuptools=bundle, wheel=bundle, via=copy, app_data_dir=/home/***/.local/share/virtualenv)
+[2023-04-01 15:06:30,947] {process_utils.py:173} INFO -     added seed packages: pip==22.0.4, setuptools==62.1.0, wheel==0.37.1
+[2023-04-01 15:06:30,950] {process_utils.py:173} INFO -   activators BashActivator,CShellActivator,FishActivator,NushellActivator,PowerShellActivator,PythonActivator
+[2023-04-01 15:06:31,013] {process_utils.py:165} INFO - Executing cmd: /tmp/venvj6i4x8uw/bin/pip install -r /tmp/venvj6i4x8uw/requirements.txt
+[2023-04-01 15:06:31,035] {process_utils.py:169} INFO - Output:
+[2023-04-01 15:06:34,053] {process_utils.py:173} INFO - Collecting funcsigs
+[2023-04-01 15:06:34,558] {process_utils.py:173} INFO -   Downloading funcsigs-1.0.2-py2.py3-none-any.whl (17 kB)
+[2023-04-01 15:06:34,825] {process_utils.py:173} INFO - Collecting dill
+[2023-04-01 15:06:34,921] {process_utils.py:173} INFO -   Downloading dill-0.3.6-py3-none-any.whl (110 kB)
+[2023-04-01 15:06:35,229] {process_utils.py:173} INFO -      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 110.5/110.5 KB 349.0 kB/s eta 0:00:00
+[2023-04-01 15:06:35,341] {process_utils.py:173} INFO - Installing collected packages: funcsigs, dill
+[2023-04-01 15:06:35,473] {process_utils.py:173} INFO - Successfully installed dill-0.3.6 funcsigs-1.0.2
+[2023-04-01 15:06:36,065] {process_utils.py:173} INFO - WARNING: You are using pip version 22.0.4; however, version 23.0.1 is available.
+[2023-04-01 15:06:36,068] {process_utils.py:173} INFO - You should consider upgrading via the '/tmp/venvj6i4x8uw/bin/python -m pip install --upgrade pip' command.
+[2023-04-01 15:06:36,217] {process_utils.py:165} INFO - Executing cmd: /tmp/venvj6i4x8uw/bin/python /tmp/venvj6i4x8uw/script.py /tmp/venvj6i4x8uw/script.in /tmp/venvj6i4x8uw/script.out /tmp/venvj6i4x8uw/string_args.txt
+[2023-04-01 15:06:36,238] {process_utils.py:169} INFO - Output:
+[2023-04-01 15:06:36,928] {python.py:173} INFO - Done. Returned value was: {'1001': 301.27, '1002': 433.21, '1003': 502.22}
+[2023-04-01 15:06:36,985] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=tutorial_taskflow_api_etl_virtualenv, task_id=extract, execution_date=20230401T150627, start_date=20230401T150628, end_date=20230401T150636
+[2023-04-01 15:06:37,023] {local_task_job.py:156} INFO - Task exited with return code 0
+[2023-04-01 15:06:37,081] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check
